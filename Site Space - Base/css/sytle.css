@@ -1,0 +1,201 @@
+.icons{
+	background-color:black;
+	margin-top:20px ;
+	border-radius: 0px!important;
+	color: white;
+	margin-top: auto;
+	padding-bottom: 60px;
+}
+.icons h2{
+	color:#CBCBFF!important;
+}
+.icons ul{
+	text-align: left;
+  padding-left: 30px;
+}
+
+.centered {
+
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.gray{
+	background-color: #d3d3d3;
+}
+.size{
+	height: 400px;
+
+}
+.myfooter{
+	background-color: #efefef;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.my-icon{
+	font-size: 50px;
+}
+.navbar-brand{
+	padding-top: 0px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+}
+.navbar{
+  background-color: rgba(0,0,0,0.95)!important;
+	border-radius: 0px;
+	margin-bottom: 0px;
+
+}
+
+.serv-content{
+	padding: 100px,0;
+}
+.blue-line{
+	color: black;
+}
+.container-fluid{
+margin-bottom: 20px;
+}
+.Topfix{
+	margin-top: 50px;
+}
+.tableTron{
+	margin-top: 50px
+
+}
+.my-panels{
+	padding-top: 50px;
+}
+.my-display{
+	color: white!important;
+}
+
+body{
+	font-family: Ubuntu;
+}
+h1,h2,h3{
+
+	font-size: 50px;
+	color: black ;
+	margin-bottom: 10px;
+}
+button{
+	background-color: #000151!important;
+	border-color: white!important;
+	border-radius: 0px!important;
+	border-width: 3px!important;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 680px;
+  margin-bottom: 0px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 680px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 680px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Bump up size of carousel content */
+  .carousel-caption p,ul {
+
+    margin-top: 0px;
+    font-size: 30px;
+    line-height: 1.4;
+  }
+
+ /* Add a black background color to the top navigation */
+.topnav {
+
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	 height:50px; /* + 5px */
+	 display: inline-block;
+    float: left;
+    color: ;
+    text-align: center;
+    margin:0px;
+    padding-top:13px!important;
+    margin-bottom: -30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+h2{
+	padding-bottom: 30px;
+}
+.row{
+	margin-top: auto;
+	padding-top: 50px;
+}
+
+#vis_tec{
+	/*background-image: url("../Visita_tec.jpg") ;
+	background-attachment: fixed;
+	height: 500px;
+	background-size:cover;*/
+	padding-bottom: 20px;
+}
+.fix{
+	padding: 20px 20px 20px 20px;
+}
+#minic{
+	margin-top: auto;
+	padding-top: -50px!important;
+	color: white;
+}
+.back-bu{
+	background-color: #000151;
+}
+.w {
+	color: white;
+}
+.b{
+	color: black;
+}
+.bu{
+	color:#000151;
+}
+.p-center{
+	left:50%;
+}
+.shadow-w{
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.shadow-b{
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.shadow-bu{
+	text-shadow: -1px 0 #000151, 0 1px #000151, 1px 0 #000151, 0 -1px #000151;
+}
+#palestras{
+	 background-image: url("../Palestra.jpg");
+	 background-repeat: no-repeat;
+	 background-attachment: fixed;
+	 background-size:cover;
+}
