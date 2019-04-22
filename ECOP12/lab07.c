@@ -33,24 +33,34 @@ void abastecePilha(int quant, int v){
 }
 void imprimeTudo(){
   int i = 0,x=0;
+
  noResis* atual = pilha[x];
  while(x<7){
  while(atual != NULL){
  atual = atual->prox;
  i++;
  }//end while
- printf("%d Unidades de %d ohms",&i,&valorResis[x]);
+ printf("%d Unidades de %d ohms",i,valorResis[x]);
  printf("\n");
  x++;
+ atual = pilha[x];
+ i=0;
 }
 }
 void imprimeSoma(){
-  int x=0;
- noResis *atual = pilha[x];
- while(atual != NULL){
- atual = atual->prox;
- }//end while
- printf("No almoxarifado exixtem d resistores, totalizando d ohms\n");
+  int i = 0,x=0;
+
+ noResis* atual = pilha[x];
+  while(x<7){
+  while(atual != NULL){
+  atual = atual->prox;
+  i++;
+  }//end while
+  x++;
+  atual = pilha[x];
+
+ }
+ printf("No almoxarifado exixtem %d resistores\n", i);
 
 }
 bool resisDisponivel(int valor){
