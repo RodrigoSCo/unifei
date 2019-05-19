@@ -6,14 +6,15 @@
 using namespace std;
 
 void Tabuleiro::InicializaTabuleiro(){
-  Tabuleiro tabu;
+  /* Não precisa criar um tabuleiro aqui pq ele já coi criador no
+  construtor e esse é um método que esse tabuleiro já criado chama */
   int i, j;
 
   for (i=0; i<36; i++){
     for (j=0; j< ; j++){
-      tabu.MatrizInc[i][j].peso = 0;
-      tabu.MatrizInc[i][j].cor = 0;
-      tabu.MatrizInc[i][j].dono = 0;
+      self.MatrizInc[i][j].peso = 0;
+      self.MatrizInc[i][j].cor = 0;
+      self.MatrizInc[i][j].dono = 0;
     }
   }
 }
