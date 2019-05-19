@@ -7,8 +7,8 @@ class CartaObjetivo : public Carta{
     int peso;
     int orig, dest;
   public:
-    CartaObjetivo(){peso=-1;};
-    CartaObjetivo(int p) {peso=p;};
+    CartaObjetivo(){this->peso=-1;};
+    CartaObjetivo(int p) {this->peso=p;};
     ~CartaObjetivo() {};
 };
 #endif
