@@ -12,9 +12,9 @@ void Tabuleiro::InicializaTabuleiro(){
 
   for (i=0; i<36; i++){
     for (j=0; j< ; j++){
-      self.MatrizInc[i][j].peso = 0;
-      self.MatrizInc[i][j].cor = 0;
-      self.MatrizInc[i][j].dono = 0;
+      this->MatrizInc[i][j].peso = 0;
+      this->MatrizInc[i][j].cor = 0;
+      this->MatrizInc[i][j].dono = 0;
     }
   }
 }
