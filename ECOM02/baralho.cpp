@@ -2,14 +2,17 @@
 #define BARALHO_H
 #include "carta.h"
 #include "cidades.h"
+#include "time.h"
 
+srand(time(NULL));
 class Baralho{
   public:
-    int prim;
+    int prim;// guarda o primiero item da lista
+    int tam;//tamanho da lista
     Carta list[];
     Baralho(bool c){
       if(c==0){ // inicializa o baralho de cartas trem
-        int i, j;
+        int i, j; this->tam =110;
         for (i=0; i<110; i++) {
           if(i<12){
             this->list[i]->cor = 0; //COR PRETA
@@ -41,15 +44,31 @@ class Baralho{
         }
       }
       else{ // iniciliza o baralho de cartas de objetivo
+        this->tam=30;
+        //codigo incicializando todos os objetivos
 
       }
     };
     ~Baralho() {};
     Carta comprar(){ //tira a primeira carta da lista
-
+      if(this->prim==this->tam) return NULL;
+      Carta a = this->list[this->prim];
+      this->prim++;
+      return a;
     };
     void embaralhar(){
-
+      Carta a[this->tam]; int i=0;int r;
+      while(i!=this->tam){
+        r = srand();
+        if(this->list[r] == NULL) {}
+        else{
+          a[i]=this->list[r];
+          this->list[r] = NULL;
+          i++;
+        }
+      }
+      i=0;
+      while(i!=this->tam)  this->list[i]= a[i];
     };
 };
 #endif
