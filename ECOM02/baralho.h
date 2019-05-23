@@ -9,7 +9,7 @@ class Baralho{
     Carta list;
     Baralho(bool c);
     ~Baralho(){};
-    Carta comprar();
-    void embaralhar();
+    CartaTrem comprarTrem();
+    CartaObjetivo comprarObjetivo();
 };
 #endif

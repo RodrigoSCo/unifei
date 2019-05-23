@@ -11,5 +11,6 @@ class CartaObjetivo : public Carta{
     CartaObjetivo(){this->peso=-1;};
     CartaObjetivo(int p,Cidade o, Cidade d) {this->peso=p; this->orig=o; this->dest=d;};
     ~CartaObjetivo() {};
+    void mostraCarta();
 };
 #endif

@@ -1,18 +1,17 @@
-#ifndef BARALHO_H
-#define BARALHO_H
 #include "carta.h"
 #include "cidades.h"
-#include "time.h"
+#include <algorithm>
+#include <ctime>        // std::time
+#include <cstdlib>      // std::rand, std::srand
 
-srand(time(NULL));
-class Baralho{
-  public:
-    int prim;// guarda o primiero item da lista
-    int tam;//tamanho da lista
-    Carta list[];
-    Baralho(bool c){
-      if(c==0){ // inicializa o baralho de cartas trem
-        int i, j; this->tam =110;
+srand(unsigned(time(NULL)));
+/*  public:
+    int primT,primO;// guarda o primiero item da lista
+    Carta trens[110];
+    CartaObjetivo  objts[30]*/
+    Baralho::Baralho(){
+       // inicializa o baralho de cartas trem
+        int i, j;
         for (i=0; i<110; i++) {
           if(i<12){
             this->list[i]->cor = 0; //COR PRETA
@@ -40,35 +39,36 @@ class Baralho{
           }
           if (i>=96 && i<110){
             this->list[i]->cor = 8; //LOCOMOTIVA
+          random_shuffle(this.trens[0],this.trens[110],rand());
           }
         }
-      }
-      else{ // iniciliza o baralho de cartas de objetivo
-        this->tam=30;
-        //codigo incicializando todos os objetivos
 
-      }
-    };
-    ~Baralho() {};
-    Carta comprar(){ //tira a primeira carta da lista
-      if(this->prim==this->tam) return NULL;
-      Carta a = this->list[this->prim];
-      this->prim++;
-      return a;
-    };
-    void embaralhar(){
-      Carta a[this->tam]; int i=0;int r;
-      while(i!=this->tam){
-        r = srand();
-        if(this->list[r] == NULL) {}
-        else{
-          a[i]=this->list[r];
-          this->list[r] = NULL;
-          i++;
-        }
-      }
-      i=0;
-      while(i!=this->tam)  this->list[i]= a[i];
-    };
-};
-#endif
+       // iniciliza o baralho de cartas de objetivo
+
+
+    }
+
+    CartaTrem Baralho::comprarTrem(bool c){ //tira a primeira carta da lista
+          CartaTrem a = this.trens[this.primT];
+          this->primT++;
+          return a;
+    }
+
+    CartaObjetivo Baralho::comprarObjetivo(bool c){
+          CartaObjetivo b = this.objts[this.primO];
+          this->primO++;
+          return b;
+
+    }
+
+    Baralho Baralho::Baralho(Baralho c){
+      int i;
+      this.primT
+      this.primO
+      while(i<110)
+        this.trens[i]=c.trens[i];
+
+    }
+    Baralho Baralho::operator = (Baralho c){
+
+    }

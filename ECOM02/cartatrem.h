@@ -8,5 +8,6 @@ class CartaTrem : public Carta{
     CartaTrem(){this->cor=-1;};
     CartaTrem(int c){this->cor=c;};
     ~CartaTrem() {};
+    void mostraCarta();
 };
 #endif
