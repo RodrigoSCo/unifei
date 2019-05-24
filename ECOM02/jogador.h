@@ -1,17 +1,30 @@
-#ifndef JOGADOR_H
-#define JOGADOR_H
+#ifndef JOG_ID
+  #define JOG_ID
 
-class Jogador{
-  private:
-    int MatrizAdj [36][36];
-    CartaMao mao[20];
-    CartaObjetivo obj[8];
-    int peca;
-    int ident;
+  #ifndef MAX
+    #define MAX 45
+  #endif
+
+  #ifndef MAX_NO
+    #define MAX_NO 45
+  #endif
+
+  class jogador{
   public:
-    Jogador() {};
-    ~Jogador() {};
+    /* Atributos */
+    int maoTrem[MAX];
+    CartaObjetivo maoObj[MAX];
+    int ConquistasGrafo[MAX_NO][MAX_NO]; //adjacencias
+    int id;
+    int contPeca;
 
-    void InicializaJogador();
-};
+    /* Métodos */
+    jogador();
+    ~jogador();
+    void desejaDevolver();
+    int buscaProfundidade(); //Retorna o maior caminho de um vértice
+    int maiorCaminho(); //Retorna o maior dos caminhos
+
+  };
+
 #endif

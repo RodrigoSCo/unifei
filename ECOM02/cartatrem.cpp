@@ -7,7 +7,7 @@ using namespace std;
 ostream& operator<<(ostream& out, const CartaTrem&){
   out<<"\n__________\n";
   out<<"\n|          |\n";
-  switch (this.cor {
+  switch (this.cor) {
     case 0:out<<"| preto    |";
       break;
     case 1:out<<"| vermelho |";

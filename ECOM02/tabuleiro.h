@@ -8,7 +8,8 @@ class Tabuleiro{
   public:
     Tabuleiro(){};
     ~Tabuleiro(){};
-    void InicializaTabuleiro();
+    void ConfiguraTabuleiro();
+    void AtualizaTabuleiro(int origem, int chegada, int aresta, int dono);
 };
 
 #endif
