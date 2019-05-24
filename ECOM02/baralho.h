@@ -8,8 +8,10 @@ class Baralho{
     int prim;
     Carta list;
     Baralho(bool c);
+    Baralho(const Baralho& a)
     ~Baralho(){};
     CartaTrem comprarTrem();
     CartaObjetivo comprarObjetivo();
+    Baralho &operator=(const Baralho& a)
 };
 #endif

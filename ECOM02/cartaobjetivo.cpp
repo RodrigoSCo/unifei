@@ -4,10 +4,11 @@
 
 using namespace std;
 
-void CartaObjetivo::mostraCarta(){
-  printf("\n__________\n");
-  printf("\n|Pontos:%d |\n", &this.peso);
-  printf("\n|          |\n", &this.orig);
-  printf("\n|          |\n", &this.dest);
-  printf("\n__________\n");
+ ostream& operator<<(ostream& out, const CartaObjetivo&);{
+  out<<"\n__________\n";
+  out<<"\n|Pnts: %d  |\n", &this.peso;
+  out<<"\n|Orig: %d  |\n", &this.orig;
+  out<<"\n|Dest: %d  |\n", &this.dest;
+  out<<"\n__________\n";
+  return out;
 }
