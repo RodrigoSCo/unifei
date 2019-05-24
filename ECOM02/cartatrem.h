@@ -8,6 +8,6 @@ class CartaTrem : public Carta{
     CartaTrem(){this->cor=-1;};
     CartaTrem(int c){this->cor=c;};
     ~CartaTrem() {};
-    void mostraCarta();
+    friend ostream& operator<<(ostream&, const CartaTrem&);
 };
 #endif

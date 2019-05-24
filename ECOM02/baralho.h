@@ -5,8 +5,9 @@
 
 class Baralho{
   public:
-    int prim;
-    Carta list;
+    int primT,primO;// guarda o primeiro item da lista
+    Carta trens[110];
+    CartaObjetivo  objts[30]
     Baralho(bool c);
     Baralho(const Baralho& a)
     ~Baralho(){};

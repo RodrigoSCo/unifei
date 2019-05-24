@@ -56,17 +56,20 @@ Baralho::Baralho(){
   }
 }
 
-Baralho::Baralho(const Baralho& a){
-  //construtor de cópia para atribuir os dados do objeto a um novo objeto
-  this->prim = a->prim;
-  this->list = a->list;
+Baralho::Baralho(const Baralho& c){
+  int i=0;
+  this.primT=c.primT;
+  this.primO=c.primO;
+  while(i<110)
+    this.trens[i]=c.trens[i];
+  i=0;
+  while(i<30)
+    this.objts[i]=c.objts[i];
 }
 
 Baralho Baralho::&operator=(const Baralho& a){
   //Sobrecarga do operador = que permite atribuir os valores de um objeto a outro
-  this->prim = a->prim;
-  this->list = a->list;
-  return this;
+  return *this = new Baralho(a);
 }
 
 CartaTrem Baralho::comprarTrem(bool c){
@@ -81,12 +84,4 @@ CartaObjetivo Baralho::comprarObjetivo(bool c){
   CartaObjetivo b = this.objts[this.primO];
   this->primO++;
   return b;
-}
-
-Baralho Baralho::Baralho(Baralho c){
-  int i;
-  this.primT;
-  this.primO;
-  while(i<110)
-    this.trens[i]=c.trens[i];
 }

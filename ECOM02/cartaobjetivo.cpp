@@ -4,7 +4,7 @@
 
 using namespace std;
 
- ostream& operator<<(ostream& out, const CartaObjetivo&);{
+ ostream& operator<<(ostream& out, const CartaObjetivo&){
   out<<"\n__________\n";
   out<<"\n|Pnts: %d  |\n", &this.peso;
   out<<"\n|Orig: %d  |\n", &this.orig;

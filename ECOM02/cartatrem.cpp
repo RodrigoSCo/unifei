@@ -4,29 +4,29 @@
 
 using namespace std;
 
-void CartaTrem::mostraCarta(){
-  printf("\n__________\n");
-  printf("\n|          |\n");
-  switch (this.cor) {
-    case 0:printf("| preto    |");
+ostream& operator<<(ostream& out, const CartaTrem&){
+  out<<"\n__________\n";
+  out<<"\n|          |\n";
+  switch (this.cor {
+    case 0:out<<"| preto    |";
       break;
-    case 1:printf("| vermelho |");
+    case 1:out<<"| vermelho |";
       break;
-    case 2:printf("| amarelo  |");
+    case 2:out<<"| amarelo  |";
       break;
-    case 3:printf("| branco   |");
+    case 3:out<<"| branco   |";
       break;
-    case 4:printf("| laranja  |");
+    case 4:out<<"| laranja  |";
       break;
-    case 5:printf("| rosa     |");
+    case 5:out<<"| rosa     |";
       break;
-    case 6:printf("| azul     |");
+    case 6:out<<"| azul     |";
       break;
-    case 7:printf("| verde    |");
+    case 7:out<<"| verde    |";
       break;
-    case 8:printf("|locomotiva|");
+    case 8:out<<"|locomotiva|";
       break;
   }
-  printf("\n|          |\n");
-  printf("\n__________\n");
+  out<<"\n|          |\n";
+  out<<"\n__________\n";
 }
