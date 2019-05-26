@@ -6,7 +6,7 @@ class No{
   private:
     string nome[60];
     int peso;
-    string cor[20];
+    int cor;
     int dono;
   public:
     No(){};

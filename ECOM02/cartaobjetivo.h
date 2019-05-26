@@ -3,7 +3,7 @@
 #include "carta.h"
 #include "cidades.h"
 
-class CartaObjetivo : public Carta{
+class CartaObjetivo{
   protected:
     int peso;
     Cidade orig, dest;

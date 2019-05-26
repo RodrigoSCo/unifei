@@ -5,8 +5,8 @@ class CartaTrem : public Carta{
   protected:
     int cor;
   public:
-    CartaTrem(){this->cor=-1;};
-    CartaTrem(int c){this->cor=c;};
+    CartaTrem(){cor=-1;};
+    CartaTrem(int c){cor=c;};
     ~CartaTrem() {};
     friend ostream& operator<<(ostream&, const CartaTrem&);
 };

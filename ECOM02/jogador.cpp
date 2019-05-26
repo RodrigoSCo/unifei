@@ -1,9 +1,13 @@
 #include <iostream>
 #include "jogador.h"
+#include "cartaobjetivo.h"
+#include "cartatrem.h"
 
 using namespace std;
 
 jogador::jogador(){
+  trem=0;
+  objts=0;
 
   id = jogadores++; // conferir na main, sujeito a mudanca
 
@@ -70,4 +74,12 @@ int jogador::maiorCaminho(){
   }
 
   return maior;
+}
+
+void comprar(Baralho b,bool c){
+  if(c==0)
+    CartaTrem c = b.comprarTrem();
+    maoTrem[c.cor]++;
+  else if(c==1)
+    maoObj[objts]=b.comprarObjetivo();
 }

@@ -6,9 +6,9 @@ using namespace std;
 
  ostream& operator<<(ostream& out, const CartaObjetivo&){
   out<<"\n__________\n";
-  out<<"\n|Pnts: %d  |\n", &this.peso;
-  out<<"\n|Orig: %d  |\n", &this.orig;
-  out<<"\n|Dest: %d  |\n", &this.dest;
+  out<<"\n|Pnts: %d  |\n", &peso;
+  out<<"\n|Orig: %d  |\n", &orig;
+  out<<"\n|Dest: %d  |\n", &dest;
   out<<"\n__________\n";
   return out;
 }
