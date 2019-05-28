@@ -1,11 +1,13 @@
 #include <iostream>
 #include "jogador.h"
+#include "cartaobjetivo.h"
+#include "baralho.h"
 
 using namespace std;
 
-jogador::jogador(){
-
-  id = jogadores++; // conferir na main, sujeito a mudanca
+Jogador::Jogador(){
+  trem=0;
+  objts=0;
 
   contPeca = 45;
 
@@ -17,18 +19,18 @@ jogador::jogador(){
     maoTrem[i] = 0;
 
   for(int i = 0 ; i < 3 ; i ++)
-    maoTrem[compraTrem().cor] ++;
+    maoTrem[comprarTrem().cor] ++;
 
   for(int i = 0 ; i < MAX ; i ++)
     maoObj[i] = CartaObjetivo();
 
   for(int i = 0 ; i < 3 ; i ++)
-    maoObj[i] = compraObj();
+    maoObj[i] = comprarObjetivo();
 
-  DesejaDevolver();
+  desejaDevolver();
 }
 
-void jogador::desejaDevolver(){
+void Jogador::desejaDevolver(){
 
   cout<<"Seus objetivos sao:\n";
   for(int i = 0 ; i < 3 ; i ++)
@@ -44,30 +46,35 @@ void jogador::desejaDevolver(){
 
   maoObj[opcaoDevolve] = CartaObjetivo();
   cout<<"\n";
-}
+}//End Contrutor Padrão
 
 int buscaProfundidade(int v, int& vis[MAX_NO], int dis){
-
   vis[v] = true;
 
   for(int i = 0 ; i < MAX_NO ; i ++)
     if(ConsquistasGrafo[v][i] && !vis[i]) buscaProfundidade(i, vis, dis + 1);
 
   return dis;
-}
+}//End DFS
 
-int jogador::maiorCaminho(){
-
+int Jogador::maiorCaminho(){
   //chamar busca de profundidade para cada vertice
   //a cada chamada olhar maior distancia
   bool visitado[MAX_NO];
-
   int maior = 0;
 
   for(int i = 0 ; i < MAX_NO ; i ++){
     memset(visitado,0,sizeof visitado);
-    maior = max(maior , buscaProfundidade(i,visitado,0));
+    maior = max(maior, buscaProfundidade(i,visitado,0));
   }
 
   return maior;
-}
+}//End MaiorCaminho
+
+void comprar(Baralho b,bool c){
+  if(c==0)
+    CartaTrem c = b.comprarTrem();
+    maoTrem[c.cor]++;
+  else if(c==1)
+    maoObj[objts]=b.comprarObjetivo();
+}//End Comprar

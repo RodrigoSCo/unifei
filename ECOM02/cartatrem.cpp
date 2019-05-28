@@ -1,13 +1,16 @@
 #include <iostream>
-#include "carta.h"
 #include "cartatrem.h"
 
 using namespace std;
 
-ostream& operator<<(ostream& out, const CartaTrem&){
+bool operator==(int c){
+  return (cor == c);
+}
+
+ostream& operator<<(ostream& out, const CartaTrem& carta){
   out<<"\n__________\n";
   out<<"\n|          |\n";
-  switch (this.cor) {
+  switch (carta.cor) {
     case 0:out<<"| preto    |";
       break;
     case 1:out<<"| vermelho |";
@@ -29,4 +32,4 @@ ostream& operator<<(ostream& out, const CartaTrem&){
   }
   out<<"\n|          |\n";
   out<<"\n__________\n";
-}
+}//End Operator <<

@@ -1,14 +1,16 @@
 #ifndef NO_H
 #define NO_H
-#include "string"
+#include <string>
 
 class No{
-  private:
+  public:
+    /* Atributos */
     string nome[60];
     int peso;
-    string cor[20];
+    int cor;
     int dono;
-  public:
+
+    /* Contrutores e Destrutores */
     No(){};
     ~No(){};
 };
