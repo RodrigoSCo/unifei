@@ -8,12 +8,21 @@ using namespace std;
 Tabuleiro::Tabuleiro(){
   int i, j;
 
+<<<<<<< HEAD
   for (i=0; i < 36; i++){
     for (j=0; j< 96; j++){
       MatrizInc[i][j].nome = " ";
       MatrizInc[i][j].peso = 0;
       MatrizInc[i][j].cor = -1;
       MatrizInc[i][j].dono = -1;
+=======
+  for (i=0; i<36; i++){
+    for (j=0; j< ; j++){
+      MatrizInc.nome = " ";
+      MatrizInc.peso = 0;
+      MatrizInc.cor = " ";
+      MatrizInc.dono = 0;
+>>>>>>> 06ce90063f708820b056ada3e5c2532c5320c134
     }
   }
 
@@ -705,6 +714,14 @@ void Tabuleiro::ConfigurarMesa(Baralho b{
     mesa[i] = b.comprarTrem();
   }
 }//End ConfiguraMesa
+
+void Tabuleiro::ConfigurarMesa(Baralho b{
+  int i;
+
+  for (i=0; i<5; i++){
+    mesa[i] = b.comprarTrem();
+  }
+}
 
 void Tabuleiro::AtualizaTabuleiro(int o, int c, int a, int d){
   MatrizInc[o][a].dono = d;

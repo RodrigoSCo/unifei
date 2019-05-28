@@ -7,6 +7,8 @@
   #ifndef MAX_NO
     #define MAX_NO 45
   #endif
+#include "cartaobjetivo.h"
+#include "cartatrem.h"
 
   #include "cartaobjetivo.h"
   #include "cartatrem.h"

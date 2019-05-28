@@ -10,7 +10,11 @@ bool operator==(int c){
 ostream& operator<<(ostream& out, const CartaTrem& carta){
   out<<"\n__________\n";
   out<<"\n|          |\n";
+<<<<<<< HEAD
   switch (carta.cor) {
+=======
+  switch (cor) {
+>>>>>>> 06ce90063f708820b056ada3e5c2532c5320c134
     case 0:out<<"| preto    |";
       break;
     case 1:out<<"| vermelho |";

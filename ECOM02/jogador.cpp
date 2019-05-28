@@ -1,6 +1,7 @@
 #include <iostream>
 #include "jogador.h"
 #include "cartaobjetivo.h"
+<<<<<<< HEAD
 #include "baralho.h"
 
 using namespace std;
@@ -8,6 +9,17 @@ using namespace std;
 Jogador::Jogador(){
   trem=0;
   objts=0;
+=======
+#include "cartatrem.h"
+
+using namespace std;
+
+jogador::jogador(){
+  trem=0;
+  objts=0;
+
+  id = jogadores++; // conferir na main, sujeito a mudanca
+>>>>>>> 06ce90063f708820b056ada3e5c2532c5320c134
 
   contPeca = 45;
 
@@ -69,7 +81,11 @@ int Jogador::maiorCaminho(){
   }
 
   return maior;
+<<<<<<< HEAD
 }//End MaiorCaminho
+=======
+}
+>>>>>>> 06ce90063f708820b056ada3e5c2532c5320c134
 
 void comprar(Baralho b,bool c){
   if(c==0)
@@ -77,4 +93,8 @@ void comprar(Baralho b,bool c){
     maoTrem[c.cor]++;
   else if(c==1)
     maoObj[objts]=b.comprarObjetivo();
+<<<<<<< HEAD
 }//End Comprar
+=======
+}
+>>>>>>> 06ce90063f708820b056ada3e5c2532c5320c134
