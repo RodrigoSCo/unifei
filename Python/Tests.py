@@ -48,7 +48,7 @@ cv.destroyAllWindows()
 # -----------------------------
 # Loading Videos
 
-vid = cv.VideoCapture('Nome_do_Video.mp4')
+vid = cv.VideoCapture('../../dva kings row_19-01-10_00-00-40.mp4')
 
 while(vid.isOpened()):
     ret, frame = vid.read()
