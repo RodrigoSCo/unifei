@@ -63,27 +63,32 @@ public class Cardapio extends javax.swing.JFrame {
 
         jLabel2.setText("Bebidas");
 
-        jCheckBox1.setText("X-Burger");
+        jCheckBox1.setLabel("X-Burger - R$10");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
-        jCheckBox2.setText("X-Egg");
+        jCheckBox2.setLabel("X-Egg - R$15");
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox2ActionPerformed(evt);
             }
         });
 
-        jCheckBox3.setText("X-Bacon");
+        jCheckBox3.setLabel("X-Bacon - R$7");
 
-        jCheckBox4.setText("Suco");
+        jCheckBox4.setLabel("Suco - R$8");
 
-        jCheckBox5.setText("Coca");
+        jCheckBox5.setLabel("Coca - R$4");
         jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox5ActionPerformed(evt);
             }
         });
 
-        jCheckBox6.setText("Breja");
+        jCheckBox6.setLabel("Breja - R$6");
 
         jLabel3.setText("Total do Pedido:");
 
@@ -106,9 +111,9 @@ public class Cardapio extends javax.swing.JFrame {
 
         jLabel5.setText("Sobremesas");
 
-        jCheckBox7.setText("Petit Gateau");
+        jCheckBox7.setLabel("Petit Gateau - R$12");
 
-        jCheckBox8.setText("Tiramisu");
+        jCheckBox8.setLabel("Tiramisu - R$7");
 
         jLabel6.setText("Cliente");
 
@@ -134,36 +139,35 @@ public class Cardapio extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addGap(21, 21, 21)
-                                .addComponent(jLabel4))
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(75, 75, 75)
-                                .addComponent(jLabel2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox2)
-                                    .addComponent(jCheckBox3)
-                                    .addComponent(jCheckBox1))
-                                .addGap(47, 47, 47)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jCheckBox4)
-                                    .addComponent(jCheckBox5)
-                                    .addComponent(jCheckBox6, javax.swing.GroupLayout.Alignment.LEADING))))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(50, 50, 50)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
+                                        .addGap(12, 12, 12)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jCheckBox8)
-                                            .addComponent(jCheckBox7))))
-                                .addGap(0, 56, Short.MAX_VALUE)))))
+                                            .addComponent(jCheckBox2)
+                                            .addComponent(jCheckBox3)
+                                            .addComponent(jCheckBox1)))
+                                    .addComponent(jLabel1))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jCheckBox4)
+                                            .addComponent(jCheckBox6, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jCheckBox5, javax.swing.GroupLayout.Alignment.LEADING)))
+                                    .addComponent(jLabel2))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton3)
+                            .addComponent(jLabel5)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBox8)
+                                    .addComponent(jCheckBox7))))))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -297,6 +301,10 @@ public class Cardapio extends javax.swing.JFrame {
             Logger.getLogger(Cardapio.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     /**
      * @param args the command line arguments
