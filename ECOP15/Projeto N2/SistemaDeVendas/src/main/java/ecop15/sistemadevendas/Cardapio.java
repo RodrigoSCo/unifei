@@ -23,8 +23,9 @@ public class Cardapio extends javax.swing.JFrame {
      */
     private int total;
     private List<Cliente> lista;
-    public Cardapio() {
+    public Cardapio(int numMesa) {
         initComponents();
+        jTextField1.setText("Mesa "+numMesa);
         
     }
 
@@ -37,6 +38,7 @@ public class Cardapio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
@@ -53,9 +55,14 @@ public class Cardapio extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jCheckBox7 = new javax.swing.JCheckBox();
         jCheckBox8 = new javax.swing.JCheckBox();
-        jLabel6 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+
+        jButton2.setText("Novo Cliente");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,32 +70,27 @@ public class Cardapio extends javax.swing.JFrame {
 
         jLabel2.setText("Bebidas");
 
-        jCheckBox1.setLabel("X-Burger - R$10");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
+        jCheckBox1.setText("X-Burger");
 
-        jCheckBox2.setLabel("X-Egg - R$15");
+        jCheckBox2.setText("X-Egg");
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox2ActionPerformed(evt);
             }
         });
 
-        jCheckBox3.setLabel("X-Bacon - R$7");
+        jCheckBox3.setText("X-Bacon");
 
-        jCheckBox4.setLabel("Suco - R$8");
+        jCheckBox4.setText("Suco");
 
-        jCheckBox5.setLabel("Coca - R$4");
+        jCheckBox5.setText("Coca");
         jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox5ActionPerformed(evt);
             }
         });
 
-        jCheckBox6.setLabel("Breja - R$6");
+        jCheckBox6.setText("Breja");
 
         jLabel3.setText("Total do Pedido:");
 
@@ -111,20 +113,12 @@ public class Cardapio extends javax.swing.JFrame {
 
         jLabel5.setText("Sobremesas");
 
-        jCheckBox7.setLabel("Petit Gateau - R$12");
+        jCheckBox7.setText("Petit Gateau");
 
-        jCheckBox8.setLabel("Tiramisu - R$7");
+        jCheckBox8.setText("Tiramisu");
 
-        jLabel6.setText("Cliente");
-
+        jTextField1.setEditable(false);
         jTextField1.setText("ex:Fulano");
-
-        jButton2.setText("Novo Cliente");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -137,45 +131,44 @@ public class Cardapio extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(21, 21, 21)
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(12, 12, 12)
+                                        .addComponent(jLabel3)
+                                        .addGap(21, 21, 21)
+                                        .addComponent(jLabel4))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel1)
+                                        .addGap(75, 75, 75)
+                                        .addComponent(jLabel2)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton3))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(50, 50, 50)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jCheckBox2)
-                                            .addComponent(jCheckBox3)
-                                            .addComponent(jCheckBox1)))
-                                    .addComponent(jLabel1))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jCheckBox4)
-                                            .addComponent(jCheckBox6, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jCheckBox5, javax.swing.GroupLayout.Alignment.LEADING)))
-                                    .addComponent(jLabel2))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3)
-                            .addComponent(jLabel5)
+                                            .addComponent(jLabel5)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jCheckBox8)
+                                                    .addComponent(jCheckBox7))))
+                                        .addGap(0, 78, Short.MAX_VALUE))))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
+                                .addGap(12, 12, 12)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox8)
-                                    .addComponent(jCheckBox7))))))
+                                    .addComponent(jCheckBox2)
+                                    .addComponent(jCheckBox3)
+                                    .addComponent(jCheckBox1))
+                                .addGap(49, 49, 49)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBox6)
+                                    .addComponent(jCheckBox5)
+                                    .addComponent(jCheckBox4))))))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -184,39 +177,36 @@ public class Cardapio extends javax.swing.JFrame {
                 .addGap(5, 5, 5)
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox1)
                     .addComponent(jCheckBox4)
                     .addComponent(jCheckBox7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox2)
                     .addComponent(jCheckBox5)
                     .addComponent(jCheckBox8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox3)
                     .addComponent(jCheckBox6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(5, 5, 5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addGap(19, 19, 19))
+                    .addComponent(jLabel4)
+                    .addComponent(jButton3))
+                .addGap(14, 14, 14))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
@@ -228,19 +218,19 @@ public class Cardapio extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        File fi = new File(jTextField1.getText()+".txt");
-        FileWriter fir;
-        String c = "Cliente: " + jTextField1.getText()+"\n";
-        try {
-            fir = new FileWriter(fi, true);
-            fir.write(c+"\n");
-            fir.close();
-        } catch (IOException ex) {
-            Logger.getLogger(Cardapio.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        Cliente k = new Cliente(jTextField1.getText(),0);
-        if(!lista.contains(k))
-            lista.add(k);
+//        File fi = new File(jTextField1.getText()+".txt");
+//        FileWriter fir;
+//        String c = "Cliente: " + jTextField1.getText()+"\n";
+//        try {
+//            fir = new FileWriter(fi, true);
+//            fir.write(c+"\n");
+//            fir.close();
+//        } catch (IOException ex) {
+//            Logger.getLogger(Cardapio.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        Cliente k = new Cliente(jTextField1.getText(),0);
+//        if(!lista.contains(k))
+//            lista.add(k);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -302,10 +292,6 @@ public class Cardapio extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -358,7 +344,6 @@ public class Cardapio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables

@@ -1,0 +1,10 @@
+X-Burger              R$10,00
+X-Egg                  R$15,00
+X-Bacon                R$07,00
+Breja                  R$06,00
+Petit Gateau           R$12,00
+
+X-Burger              R$10,00
+Breja                  R$06,00
+Petit Gateau           R$12,00
+

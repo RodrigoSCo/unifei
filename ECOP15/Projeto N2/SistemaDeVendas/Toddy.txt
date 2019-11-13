@@ -1,7 +1,0 @@
-X-Burger              R$10,00
-Suco                   R$08,00
-TiramisuTiramisu               R$07,00
-
-Coca                   R$04,00
-Breja                  R$06,00
-

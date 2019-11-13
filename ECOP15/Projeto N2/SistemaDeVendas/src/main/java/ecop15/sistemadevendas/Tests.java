@@ -11,7 +11,7 @@ package ecop15.sistemadevendas;
  */
 public class Tests {
     public static void main(String[] args) {
-        Cardapio p = new Cardapio();
+        Cardapio p = new Cardapio(7);
         p.setVisible(true);
     }
     
