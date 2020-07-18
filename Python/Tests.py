@@ -1,3 +1,7 @@
+import numpy as np
+import pandas as pd
+import matplotlib as mp
+
 import cv2 as cv
 import numpy as np
 
@@ -48,7 +52,7 @@ cv.destroyAllWindows()
 # -----------------------------
 # Loading Videos
 
-vid = cv.VideoCapture('../../dva kings row_19-01-10_00-00-40.mp4')
+vid = cv.VideoCapture('../../../C:/Users/Rodrigo Coelho/Documents/Overwatch/videos/overwatch/dva kings row_19-01-10_00-00-40.mp4')
 
 while(vid.isOpened()):
     ret, frame = vid.read()

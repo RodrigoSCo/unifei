@@ -1,4 +1,4 @@
-# Almost all coding assignments required by or related to UNIFEI
+# All encoding assignments required by or related to UNIFEI
 ## Everything is separated by subject
 - ECOM02: Theory of Graphs (C++)
 - ECOP00: Algorithms (C Language)
